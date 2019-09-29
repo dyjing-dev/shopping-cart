@@ -57,9 +57,7 @@ Run app via
 yarn start
 ```
 
-```
-open in [stackblitz](https://stackblitz.com/github/dyjing-dev/shopping-cart)
-```
+open in [stackblitz link](https://stackblitz.com/github/dyjing-dev/shopping-cart)
 
 ## Development server
 
