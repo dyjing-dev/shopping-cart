@@ -1,0 +1,21 @@
+<div [formGroup]="form" class="add-cart-item">
+  <h3>Add</h3>
+  <div class="field-row">
+    <span class="field-label">Name:</span>
+    <select formControlName="product">
+      <option *ngFor="let product of products" [ngValue]="product">{{ product.name }}</option>
+    </select>
+  </div>
+  <div class="field-row">
+    <span class="field-label">Qty:</span>
+    <input type="number" min="1" formControlName="quantity" />
+  </div>
+  <div class="field-row">
+    <span class="field-label">Price:</span>
+    {{ selectedProduct?.price | currency }}
+  </div>
+  <div class="actions">
+    <button (click)="addItem()">add</button>
+    <button (click)="cancel()">Cancel</button>
+  </div>
+</div>

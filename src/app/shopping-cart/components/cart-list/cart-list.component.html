@@ -1,0 +1,26 @@
+<div class="cart-list">
+  <div><h3>Shopping Cart</h3></div>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>quantity</th>
+        <th>price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items$ | async">
+        <td>{{ item.product.name }}</td>
+        <td><input type="number" min="1" [ngModel]="item.quantity" (ngModelChange)="edit(item, $event)" /></td>
+        <td>{{ item.product.price }}</td>
+        <td><button (click)="delete(item)">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="total">
+    total:
+    <span class="total-number">{{ total$ | async | currency }}</span>
+  </div>
+</div>

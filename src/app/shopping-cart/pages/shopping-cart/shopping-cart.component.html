@@ -1,1 +1,4 @@
-<p>shopping-cart works!</p>
+<div class="shopping-cart">
+  <app-cart-list></app-cart-list>
+  <app-add-cart-item [products]="products$ | async" (add)="addItem($event)"></app-add-cart-item>
+</div>
