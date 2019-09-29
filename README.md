@@ -32,14 +32,14 @@ This project is to demo shopping cart angular app. The app architecture and some
 ## Other Assumptions
 
 1. Unit testing is not fully covered
-2. simple CSS style without UI framework like Angular Materia, ng zorro
+2. simple CSS style without UI framework like Angular Material, ng zorro
 3. UI validation and message notification are missing
 
 ## Technology Used
 
 Angular 8
 ngrx
-Preetier
+prettier
 
 ## Build and Run the App
 
@@ -55,6 +55,10 @@ Run app via
 
 ```
 yarn start
+```
+
+```
+open in [stackblitz](https://stackblitz.com/github/dyjing-dev/shopping-cart)
 ```
 
 ## Development server
