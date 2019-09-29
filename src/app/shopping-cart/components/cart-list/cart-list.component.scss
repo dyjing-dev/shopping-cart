@@ -1,4 +1,12 @@
 .cart-list {
+  .header {
+    display: flex;
+    align-items: center;
+
+    .search {
+      margin-left: auto;
+    }
+  }
   .total {
     display: flex;
     justify-content: flex-end;

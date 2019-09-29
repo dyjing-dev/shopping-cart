@@ -18,6 +18,7 @@ export class AddCartItemComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit() {
+    // set first product as default
     if (this.products && this.products.length > 0) {
       this.selectedProduct = this.products[0];
     }
@@ -31,7 +32,7 @@ export class AddCartItemComponent implements OnInit {
   addItem() {
     const item = this.form.value;
     this.add.emit(item);
-    // reset form after add
+    // reset form after add item
     this.loadDefaultForm();
   }
 

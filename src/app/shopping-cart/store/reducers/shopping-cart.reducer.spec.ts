@@ -9,6 +9,7 @@ describe('Shopping Cart Reducer', () => {
   const products = generateMockProducts();
   const initialState: fromShoppingCart.State = {
     loading: false,
+    query: '',
     shoppingCartItems: products.map(x => {
       return {
         product: x,

@@ -7,11 +7,13 @@ export const shoppingCartFeatureKey = 'cartItems';
 export interface State {
   loading: boolean;
   shoppingCartItems: ShoppingCartItem[];
+  query: string;
 }
 
 export const initialState: State = {
   loading: false,
   shoppingCartItems: [],
+  query: '',
 };
 
 const updateItem = (items: ShoppingCartItem[], item: ShoppingCartItem) =>
@@ -45,7 +47,16 @@ export const reducer = createReducer(
   on(shoppingCartActions.DeleteItem, (state, { item }) => ({
     ...state,
     shoppingCartItems: state.shoppingCartItems.filter(x => x.product.name !== item.product.name),
+  })),
+  on(shoppingCartActions.SearchItem, (state, { query }) => ({
+    ...state,
+    query,
+  })),
+  on(shoppingCartActions.ClearSearch, state => ({
+    ...state,
+    query: '',
   }))
 );
 
 export const getShoppingCartItems = (state: State) => state.shoppingCartItems;
+export const getQuery = (state: State) => state.query;

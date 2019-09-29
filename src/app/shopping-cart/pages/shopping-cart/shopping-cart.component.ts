@@ -24,6 +24,7 @@ export class ShoppingCartComponent implements OnInit {
 
   addItem(item: ShoppingCartItem) {
     this.store.dispatch(fromStore.AddItem({ item }));
+    this.store.dispatch(fromStore.ClearSearch()); // clear any search when adding new item
   }
 
   delete(item: ShoppingCartItem) {

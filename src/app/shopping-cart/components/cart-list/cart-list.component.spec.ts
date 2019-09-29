@@ -22,7 +22,11 @@ describe('CartListComponent', () => {
       imports: [RouterTestingModule, CommonModule, FormsModule, ReactiveFormsModule],
       providers: [
         provideMockStore({
-          selectors: [{ selector: fromStore.getItems, value: [] }, { selector: fromStore.getTotal, value: 20 }],
+          selectors: [
+            { selector: fromStore.getItems, value: [] },
+            { selector: fromStore.getSearchQuery, value: '' },
+            { selector: fromStore.getTotal, value: 20 },
+          ],
         }),
       ],
       declarations: [CartListComponent],

@@ -1,12 +1,13 @@
 <div class="cart-list">
-  <div>
+  <div class="header">
     <h3 class="header-title">Shopping Cart</h3>
+    <input type="text" class="search" placeholder="search..." [ngModel]="query$ | async" (keyup)="terms$.next($event.target.value)" />
   </div>
   <table class="cart-table">
     <thead>
       <tr>
         <th>name</th>
-        <th>quantity</th>
+        <th>qty</th>
         <th>price</th>
         <th></th>
       </tr>
