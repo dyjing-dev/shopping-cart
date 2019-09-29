@@ -1,0 +1,21 @@
+.cart-list {
+  .total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
+  }
+}
+
+.cart-table {
+  width: 100%;
+  td,
+  th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+}

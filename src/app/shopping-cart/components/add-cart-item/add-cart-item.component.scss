@@ -1,0 +1,15 @@
+.add-cart-item {
+  .field-row {
+    margin: 8px 0;
+  }
+
+  .field-label {
+    width: 20%;
+    display: inline-block;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

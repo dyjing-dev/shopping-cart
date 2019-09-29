@@ -9,6 +9,8 @@ import { Product, ShoppingCartItem } from '../../models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AddCartItemComponent implements OnInit {
+  // pure presentational component with Input and Output
+
   @Input() products: Product[];
   @Output() add = new EventEmitter<ShoppingCartItem>();
   form: FormGroup;

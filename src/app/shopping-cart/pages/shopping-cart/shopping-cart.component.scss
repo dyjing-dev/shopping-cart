@@ -1,3 +1,33 @@
 :host {
   width: 100%;
 }
+.shopping-cart {
+  width: 100%;
+  display: flex;
+
+  // mobile first design
+  flex-direction: column;
+  padding: 24px;
+
+  app-add-cart-item,
+  app-cart-list {
+    flex: 1;
+    margin: 8px;
+    border: 1px solid #dddddd;
+    padding: 6px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .shopping-cart {
+    // change flex direction with big screen
+    flex-direction: row;
+  }
+  // change section order
+  app-add-cart-item {
+    order: 1;
+  }
+  app-cart-list {
+    order: 2;
+  }
+}

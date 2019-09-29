@@ -12,6 +12,8 @@ import { ShoppingCartItem } from '../../models/shopping-cart-item';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CartListComponent implements OnInit {
+  // container (smart) component which talks to the store
+
   items$: Observable<ShoppingCartItem[]>;
   total$: Observable<number>;
 
